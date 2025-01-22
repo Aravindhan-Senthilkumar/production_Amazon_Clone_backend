@@ -63,7 +63,7 @@ const sendVerificationEmail = async (email,verificationToken) => {
 
 
 // endpoint to register in the app
-app.post('/register',async (req,res) => {
+app.post('/$/register',async (req,res) => {
     try{
         const { name,email,password } = req.body;
 
