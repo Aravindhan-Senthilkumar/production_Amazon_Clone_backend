@@ -61,9 +61,18 @@ const sendVerificationEmail = async (email,verificationToken) => {
     }
 };
 
+//endpoint to register in the app
+app.get('/',async(req,res) => {
+    try{
+        return res.status(200).json({ message: "Welcome to Amazon Clone" })
+    }catch(error){
+       console.error("Error connecting to the Backend Service",error);
+       res.status(500).json({ message:"Backend Services Failed" })
+    }
+})
 
 // endpoint to register in the app
-app.post('/$/register',async (req,res) => {
+app.post('/register',async (req,res) => {
     try{
         const { name,email,password } = req.body;
 
