@@ -50,7 +50,7 @@ const sendVerificationEmail = async (email,verificationToken) => {
         from: `"Amazon Clone" <${process.env.EMAIL_USER}>`,
         to:email,
         subject: "Email Verification",
-        text: `Please click the following link to verify your email : http://localhost:8000/verify/${verificationToken}` 
+        text: `Please click the following link to verify your email : https://amazon-clone-server-cnk1.onrender.com/verify/${verificationToken}` 
     };
 
     //send the email
